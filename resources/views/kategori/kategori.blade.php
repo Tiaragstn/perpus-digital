@@ -32,8 +32,9 @@
                                                 <button type ="submit" class ="btn btn-danger">
                                                     <i class="fa fa-trash"></i>
                                                     </button>
-                                            </form>
-
+                                                    <a href="{{ route('kategori.edit', $k->id) }}" class="btn btn-primary">
+                                                        <i class=" fas fa-fw fa-solid fa-pen"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                 @empty
