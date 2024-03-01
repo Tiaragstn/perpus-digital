@@ -6,6 +6,8 @@ use App\Models\Buku;
 use App\Models\Kategori;
 use App\Models\Kategoribukurelasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 class BukuController extends Controller
 {
     public function index()
