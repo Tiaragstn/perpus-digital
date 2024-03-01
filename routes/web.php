@@ -18,9 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BukuController::class, 'welcome']);
+    
 Auth::routes();
 
 Route::middleware('auth')->group(function () {
@@ -45,6 +44,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/kategori/edit/{id}',[KategoriController::class, 'edit'])->name('kategori.edit');
     Route::post('/kategori/update/{id}',[KategoriController::class, 'update'])->name('kategori.update');
     Route::get('/report', [PeminjamanController::class, 'print'])->name('print'); 
+    Route::get('/peminjaman', [PeminjamanController::class, 'index'])->name('peminjaman.index');
+    Route::get('/peminjaman/tambah', [PeminjamanController::class, 'tambahPeminjaman'])->name('peminjaman.tambah');
+    Route::post('/peminjaman/store', [PeminjamanController::class, 'storePeminjaman'])->name('peminjaman.store');
+    Route::post('/peminjaman/selesai/{id}', [PeminjamanController::class, 'kembalikanBuku'])->name('peminjaman.kembalikan');
+    
   
 });
 
