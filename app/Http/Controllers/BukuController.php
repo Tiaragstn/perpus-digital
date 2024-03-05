@@ -28,6 +28,7 @@ class BukuController extends Controller
     {
         $request->validate([
             'foto' => 'required|image| mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'foto' =>'required|image|mimes:jpeg,png,jpg,gif,webp,svg|max:100000',
             'judul' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
