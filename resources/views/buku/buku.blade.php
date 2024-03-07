@@ -22,6 +22,7 @@
                                     <th>Penulis</th>
                                     <th>Penerbit</th>
                                     <th>Tahun Terbit</th>
+                                    <th>Sinopsis</th>
                                     <th>Aksi</th>
                                     
                                 </tr>
@@ -37,6 +38,7 @@
                                         <td>{{ $b->penulis }}</td>
                                         <td>{{ $b->penerbit }}</td>
                                         <td>{{ $b->tahun_terbit }}</td>
+                                        <td>{{ $b->sinopsis }}</td>
                                         <td>
                                             <form action="{{ route('buku.hapus',$b->id) }}" method="post">
                                                 @csrf

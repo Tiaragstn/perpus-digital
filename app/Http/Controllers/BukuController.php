@@ -27,11 +27,12 @@ class BukuController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'foto' => 'required|image| mimes:jpeg,png,jpg,gif,svg|max:2048',
+          
             'foto' =>'required|image|mimes:jpeg,png,jpg,gif,webp,svg|max:100000',
             'judul' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
+            'sinopsis' => 'required',
             'tahun_terbit' => 'required|integer',
             'kategori_id' => 'required',
         ]);
@@ -46,7 +47,9 @@ class BukuController extends Controller
             'judul' => $request->judul,
             'penulis' => $request->penulis,
             'penerbit' => $request->penerbit,
+            'sinopsis' => $request->sinopsis,
             'tahun_terbit' => $request->tahun_terbit,
+            'aksi' => $request->aksi,
         ]);
 
         $buku->kategori()->attach($kategori);
@@ -75,6 +78,7 @@ class BukuController extends Controller
             'judul' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
+            'sinopsis' => 'required',
             'tahun_terbit' => 'required|integer',
             'kategori_id' => 'required',
         ]);
@@ -97,6 +101,7 @@ class BukuController extends Controller
         $buku->judul = $request->judul;
         $buku->penulis = $request->penulis;
         $buku->penerbit = $request->penerbit;
+        $buku->sinopsis = $request->sinopsis;
         $buku->tahun_terbit = $request->tahun_terbit;
         $buku->save();
 
@@ -111,4 +116,9 @@ class BukuController extends Controller
         $buku = Buku::all();
         return view('welcome', ['buku' => $buku]);
     }
+    public function show($id){
+        $buku = Buku::findOrFail($id);
+        return view ('buku.detail_buku', ['buku' => $buku]);
+    }
+
 }

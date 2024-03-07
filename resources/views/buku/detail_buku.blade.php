@@ -10,8 +10,8 @@
 </head>
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-3"> <!-- Adjust the column size based on your preference -->
-                <div class="card mb-3">
+            <div class="col-md-4"> <!-- Adjust the column size based on your preference -->
+                <div class="card mb-4">
                 <img src="{{ asset('storage/'.$buku->foto) }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <table class="table table-hover">

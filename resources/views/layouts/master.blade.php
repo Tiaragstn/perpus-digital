@@ -44,8 +44,8 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="home">
-                    <i class="fa-brands fa-digital-ocean"></i>
-                    <span>Digital Perpustakaan</span></a>
+                <i class="fa-solid fa-book-open-reader"></i>
+                    <span><font color="black">Digital Perpustakaan</font></span></a>
             </li>
 
            
@@ -79,23 +79,23 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route ('buku.index') }}">
                     <i class=" fas fa-fw fa-solid fa-book-open"></i>
-                    <span>Buku</span></a>
+                    <span><font color="black">Buku</font></span></a>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
             <a class="nav-link" href="{{ route ('kategori') }}">
                     <i class="fas fa-fw fa-solid fa-layer-group"></i>
-                    <span>Data Kategori</span></a>
+                    <span><font color="black">Data Kategori</font></span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route ('peminjaman.index') }}">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Peminjaman</span></a>
+                    <span><font color="black">Peminjaman</font></span></a>
             </li>
-
+             
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -104,6 +104,14 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
             @endrole
+            @role('user')
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('peminjaman.user')}}">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span>Data Peminjaman</span></a>
+            </li>
+            @endrole
+
         </ul>
         <!-- End of Sidebar -->
 
