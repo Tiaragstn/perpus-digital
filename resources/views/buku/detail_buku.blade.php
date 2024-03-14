@@ -31,7 +31,12 @@
                                 <th nowrap>Tahun Terbit: </th>
                                 <td nowrap>{{$buku->tahun_terbit}}</td>
                             </tr>
+                            <tr>
+                                <th nowrap>Sinopsis: </th>
+                                <td>{{$buku->sinopsis}}</td>
+                            </tr>
                         </table>
+                        <a href = "/">Kembali</a>
                     </div>
                 </div>
             </div>

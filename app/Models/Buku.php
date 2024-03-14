@@ -16,6 +16,7 @@ class Buku extends Model
         'judul',
         'penulis',
         'penerbit',
+        'sinopsis',
         'tahun_terbit'
     ];
 

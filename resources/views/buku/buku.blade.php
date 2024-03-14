@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">List Buku</div>
+                    <div class="card-header"><h3>List Buku</div></h3>
 
                     <div class="card-body">
                         <div class="mb-4">
@@ -17,13 +17,14 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                <th>Foto Buku</th>
-                                    <th>Judul</th>
-                                    <th>Penulis</th>
-                                    <th>Penerbit</th>
-                                    <th>Tahun Terbit</th>
-                                    <th>Sinopsis</th>
-                                    <th>Aksi</th>
+                                    <tr bgcolor ='white' align=center> 
+                                <th><font color ='black'>Foto Buku</font color></th>
+                                    <th><font color ='black'>Judul</font color></th>
+                                    <th><font color ='black'>Penulis</font color></th>
+                                    <th><font color ='black'>Penerbit</font color></th>
+                                    <th><font color ='black'>Tahun terbit</font color></th>
+                                    <th><font color ='black'>Sinopsis</font color></th>
+                                    <th><font color ='black'>Aksi</font color></th>
                                     
                                 </tr>
                             </thead>

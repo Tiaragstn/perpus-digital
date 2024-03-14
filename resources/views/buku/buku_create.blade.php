@@ -48,6 +48,7 @@
                                 <input type="number" name="tahun_terbit" class="form-control" required>
                             </div>
 
+
                             <div class="mb-4">
                                 <label for="kategori_id" class="form-label">Kategori:</label>
                                 <select name="kategori_id" class="form-control" required>
