@@ -19,7 +19,7 @@
                                 <tr>
                                     <tr bgcolor ='white' align=center> 
                                 <th><font color ='black'>Foto Buku</font color></th>
-                                    <th><font color ='black'>Judul</font color></th>
+                                    <th><font color ='blue'>Judul</font color></th>
                                     <th><font color ='black'>Penulis</font color></th>
                                     <th><font color ='black'>Penerbit</font color></th>
                                     <th><font color ='black'>Tahun terbit</font color></th>
