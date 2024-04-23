@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <div class="py-5">
-    <div class="container">
+    <div class="container-fluid">
             @php
                 $totalBuku = \App\Models\Buku::count();
                 $totalPeminjam = \App\Models\Peminjaman::count();
@@ -62,7 +62,7 @@
         <div class="card border-0 shadow-lg rounded-lg">
             <div class="card-body">
                 <div class="text-gray-900">
-                    {{ __("Selamat Datang") }} {{ Auth::user()->name }}
+                    <h5 align=center>{{ __("Selamat Datang") }} {{ Auth::user()->name }}
                 </div>
             </div>
         </div>

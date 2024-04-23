@@ -1,12 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>perpustakaan umum</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="{{ asset ('assets/css/styles.min.css') }}" />
+</head>
 
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+        <h5 bgcolor="grey" align="center">{{ __('TI-PERPUS') }}</h5>
+
+        <h5 bgcolor="grey" align="center">{{ __('Welcome To Perpustakaan Novel Umum') }}</h5>
+
+            <div class="card">
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
